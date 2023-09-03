@@ -1,14 +1,8 @@
-name: My first github action
+name: My Github Action
 on: [push]
 jobs:
-  print-hello-world:
+  build-app:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello world"
-      - run: echo "step no 2"
-
-  print-my-name:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "my name is Serius Black"
-      - run: echo "I belong to slytherin"
+      - uses: actions/checkout@v2
+      - run: tree
